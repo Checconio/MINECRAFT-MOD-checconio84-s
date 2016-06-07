@@ -1,0 +1,29 @@
+tile.uraniumOre.name=Uranium Ore
+tile.uraniumBlock.name=Uranium Block
+tile.obsidianStairs.name=Obsidian Stairs
+tile.stoneStairs.name=Stone Stairs
+tile.mossyCobbleStoneStairs.name=Mossy Cobblestone Stairs
+
+item.uraniumIngot.name=Uranium Ingot
+item.uraniumPowder.name=Uranium Powder
+item.uraniumSword.name=Uranium Sword
+item.uraniumPickaxe.name=Uranium Pickaxe
+item.uraniumAxe.name=Uranium Axe
+item.uraniumSpade.name=Uranium Spade
+item.uraniumHoe.name=Uranium Hoe
+item.uraniumHelmet.name=Uranium Helmet
+item.uraniumChestplate.name=Uranium Chestplate
+item.uraniumLeggings.name=Uranium Leggings
+item.uraniumBoots.name=Uranium Boots
+item.uraniumSwordDisinfected.name=Uranium Sword Disinfected
+item.uraniumPickaxeDisinfected.name=Uranium Pickaxe Disinfected
+item.uraniumAxeDisinfected.name=Uranium Axe Disinfected
+item.uraniumSpadeDisinfected.name=Uranium Spade Disinfected
+item.uraniumHoeDisinfected.name=Uranium Hoe Disinfected
+item.uraniumHelmetDisinfected.name=Uranium Helmet Disinfected
+item.uraniumChestplateDisinfected.name=Uranium Chestplate Disinfected
+item.uraniumLeggingsDisinfected.name=Uranium Leggings Disinfected
+item.uraniumBootsDisinfected.name=Uranium Boots Disinfected
+
+itemGroup.tabItem=Checco Item
+itemGroup.tabBlock=Checco Block

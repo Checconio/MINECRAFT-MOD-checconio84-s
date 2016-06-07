@@ -1,0 +1,29 @@
+﻿tile.uraniumOre.name=Minerai d'Uranium
+tile.uraniumBlock.name=Bloc d'Uranium
+tile.obsidianStairs.name=Escalier en Obsidienne
+tile.stoneStairs.name=Escalier en Roche
+tile.mossyCobbleStoneStairs.name=Escalier en Pierres moussues
+
+item.uraniumIngot.name=Lingot d'Uranium
+item.uraniumPowder.name=Poudre d'Uranium
+item.uraniumSword.name=Épée en Uranium
+item.uraniumPickaxe.name=Pioche en Uranium
+item.uraniumAxe.name=Hache en Uranium
+item.uraniumSpade.name=Pelle en Uranium
+item.uraniumHoe.name=Houe en Uranium
+item.uraniumHelmet.name=Casque en Uranium
+item.uraniumChestplate.name=Plastron en Uranium
+item.uraniumLeggings.name=Jambières en Uranium
+item.uraniumBoots.name=Bottes en Uranium
+item.uraniumSwordDisinfected.name=Épée en Uranium Désinfecté
+item.uraniumPickaxeDisinfected.name=Pioche en Uranium Désinfecté
+item.uraniumAxeDisinfected.name=Hache en Uranium Désinfecté
+item.uraniumSpadeDisinfected.name=Pelle en Uranium Désinfecté
+item.uraniumHoeDisinfected.name=Houe en Uranium Désinfecté
+item.uraniumHelmetDisinfected.name=Casque en Uranium Désinfecté
+item.uraniumChestplateDisinfected.name=Plastron en Uranium Désinfecté
+item.uraniumLeggingsDisinfected.name=Jambières en Uranium Désinfecté
+item.uraniumBootsDisinfected.name=Bottes en Uranium Désinfecté
+
+itemGroup.tabItem=Checco Item
+itemGroup.tabBlock=Checco Block
