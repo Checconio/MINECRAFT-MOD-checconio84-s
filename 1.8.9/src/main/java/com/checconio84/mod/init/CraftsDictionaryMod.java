@@ -65,7 +65,32 @@ public class CraftsDictionaryMod
     public static void craftArmorDisinfected(Item itemIn, Item itemOut)
     {
         GameRegistry.addRecipe(new ItemStack(itemOut, 1), new Object[]{"###", "#I#", "###", '#', Items.gold_ingot, 'I', itemIn});
-    } 
+    }
+    
+    public static void craftColoredWool(Block blockIn, Block blockOut)
+    {
+        int i;
+        for (i = 0; i < 16; ++i)
+        {
+            GameRegistry.addRecipe(new ItemStack(blockOut, 1, i), new Object[]{" # ", "#I#", " # ", '#', Items.glowstone_dust, 'I', new ItemStack(blockIn, 1 , i)});
+        }
+    }
+    
+    public static void craftStairs(Block blockIn, Block blockOut)
+    {
+        GameRegistry.addRecipe(new ItemStack(blockOut, 4), new Object[]{"#  ", "## ", "###", '#', blockIn});
+        GameRegistry.addRecipe(new ItemStack(blockOut, 4), new Object[]{"  #", " ##", "###", '#', blockIn});
+    }
+    
+    public static void craftCustom(Item itemOut, int quantity, Object... params)
+    {
+        GameRegistry.addRecipe(new ItemStack(itemOut, quantity), params);
+    }
+    
+    public static void craftCustom(Block blockOut, Object... params)
+    {
+        GameRegistry.addRecipe(new ItemStack(blockOut, 1), params);
+    }
     
     //Smelting
     public static void addSmelting(Item itemIn, Item itemOut)

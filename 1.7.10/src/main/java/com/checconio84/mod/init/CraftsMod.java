@@ -37,6 +37,7 @@ public class CraftsMod
         craftStairs(obsidian, obsidianStairs);
         craftStairs(stone, stoneStairs);
         craftStairs(mossy_cobblestone, mossyCobbleStoneStairs);
+        craftStairs(glass, glassStairs);
         craftCustom(marioStars, 1, new Object[]{" D ", "DUD", " D ", 'D', diamond, 'U', uraniumIngot});
     }
 }

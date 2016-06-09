@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "color=white": { "model":"checconio:white_wool" },
+        "color=orange": { "model":"checconio:orange_wool" },
+		"color=magenta": { "model":"checconio:magenta_wool" },
+		"color=light_blue": { "model":"checconio:light_blue_wool" },
+		"color=yellow": { "model":"checconio:yellow_wool" },
+		"color=lime": { "model":"checconio:lime_wool" },
+		"color=pink": { "model":"checconio:pink_wool" },
+		"color=gray": { "model":"checconio:gray_wool" },
+		"color=silver": { "model":"checconio:silver_wool" },
+		"color=cyan": { "model":"checconio:cyan_wool" },
+		"color=purple": { "model":"checconio:purple_wool" },
+		"color=blue": { "model":"checconio:blue_wool" },
+		"color=brown": { "model":"checconio:brown_wool" },
+		"color=green": { "model":"checconio:green_wool" },
+		"color=red": { "model":"checconio:red_wool" },
+		"color=black": { "model":"checconio:black_wool" }
+    }
+}

@@ -4,6 +4,7 @@ import static com.checconio84.mod.init.CraftsDictionaryMod.*;
 import static com.checconio84.mod.init.ItemsMod.*;
 import static com.checconio84.mod.init.BlocksMod.*;
 import static net.minecraft.init.Blocks.*;
+import static net.minecraft.init.Items.*;
 
 public class CraftsMod
 {
@@ -29,5 +30,12 @@ public class CraftsMod
         craftArmorDisinfected(uraniumChestplate, uraniumChestplateDisinfected);
         craftArmorDisinfected(uraniumLeggings, uraniumLeggingsDisinfected);
         craftArmorDisinfected(uraniumBoots, uraniumBootsDisinfected);
+        craftColoredWool(wool, lightWool);
+        craftColoredWool(carpet, lightCarpet);
+        craftStairs(obsidian, obsidianStairs);
+        craftStairs(stone, stoneStairs);
+        craftStairs(mossy_cobblestone, mossyCobbleStoneStairs);
+        craftStairs(glass, glassStairs);
+        craftCustom(marioStars, 1, new Object[]{" D ", "DUD", " D ", 'D', diamond, 'U', uraniumIngot});
     }
 }

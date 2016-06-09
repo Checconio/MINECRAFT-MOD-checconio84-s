@@ -11,6 +11,7 @@ import com.checconio84.mod.blocks.BlockStairsMod;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockWood;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemCloth;
@@ -28,7 +29,7 @@ public class BlocksMod
         obsidianStairs = new BlockStairsMod(Blocks.obsidian, 0).setHardness(50.0F).setResistance(2000.0F).setBlockName("obsidianStairs").setCreativeTab(tabBlock).setLightOpacity(0);
         stoneStairs = new BlockStairsMod(Blocks.stone, 0).setHardness(1.5F).setResistance(10.0F).setBlockName("stoneStairs").setCreativeTab(tabBlock).setLightOpacity(0);
         mossyCobbleStoneStairs = new BlockStairsMod(Blocks.mossy_cobblestone, 0).setHardness(2.0F).setResistance(10.0F).setBlockName("mossyCobbleStoneStairs").setCreativeTab(tabBlock).setLightOpacity(0);
-        glassStairs = new BlockStairsMod(Blocks.glass, 0).setHardness(2.0F).setResistance(10.0F).setBlockName("glassStairs").setCreativeTab(tabBlock).setLightOpacity(0);
+        glassStairs = new BlockStairsMod(Blocks.glass, 0).setHardness(0.3F).setBlockName("glassStairs").setCreativeTab(tabBlock).setLightOpacity(0);
         lightWool = new BlockColoredMod(Material.cloth).setHardness(0.8F).setBlockName("lightWool").setCreativeTab(tabBlock).setBlockTextureName("wool_colored").setLightLevel(1.0F);
         lightCarpet = new BlockCarpetMod().setHardness(0.1F).setBlockName("lightCarpet").setCreativeTab(tabBlock).setBlockTextureName("wool_colored").setLightLevel(1.0F);
     }

@@ -19,7 +19,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemsMod
-{    
+{
+    public static Item marioStars;
     public static Item uraniumIngot, uraniumPowder;
     public static Item uraniumSword, uraniumPickaxe, uraniumAxe, uraniumSpade, uraniumHoe;
     public static Item uraniumHelmet, uraniumChestplate, uraniumLeggings, uraniumBoots;
@@ -28,6 +29,7 @@ public class ItemsMod
     
     public static void init()
     {
+        marioStars = new ItemMod().setUnlocalizedName("marioStars").setCreativeTab(tabItem);
         uraniumIngot = new ItemMod().setUnlocalizedName("uraniumIngot").setCreativeTab(tabItem);
         uraniumPowder = new ItemMod().setUnlocalizedName("uraniumPowder").setCreativeTab(tabItem);      
         uraniumSword = new ItemSwordMod(URANIUM).setUnlocalizedName("uraniumSword").setCreativeTab(tabItem);
@@ -52,6 +54,7 @@ public class ItemsMod
     
     public static void register()
     {
+        GameRegistry.registerItem(marioStars, marioStars.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(uraniumIngot, uraniumIngot.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(uraniumPowder, uraniumPowder.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(uraniumSword, uraniumSword.getUnlocalizedName().substring(5));
@@ -76,6 +79,7 @@ public class ItemsMod
     
     public static void registerRenders()
     {
+        registerRender(marioStars);
         registerRender(uraniumIngot);
         registerRender(uraniumPowder);
         registerRender(uraniumSword);

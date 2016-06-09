@@ -6,7 +6,7 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "http://checconio84.esy.es/checconio84-s-mod.html",
-  "updateUrl": "http://checconio84.esy.es/telechargement/checconio84's_Mod.jar",
+  "updateUrl": "http://checconio84.esy.es/telechargement/checconio84's_Mod_1.7.10.jar",
   "authorList": ["checconio84"],
   "credits": "https://www.youtube.com/user/checconio84",
   "logoFile": "logo.png",

@@ -5,8 +5,8 @@ import net.minecraft.block.material.Material;
 
 public class BlockColoredMod extends BlockColored
 {
-    public BlockColoredMod(Material p_i45398_1_)
+    public BlockColoredMod(Material materialIn)
     {
-        super(p_i45398_1_);
+        super(materialIn);
     }
 }
