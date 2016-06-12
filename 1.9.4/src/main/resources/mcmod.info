@@ -1,0 +1,16 @@
+[
+{
+  "modid": "checconio",
+  "name": "checconio84's Mod",
+  "description": "Mod de checconio84 ^^",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://checconio84.esy.es/checconio84-s-mod.html",
+  "updateUrl": "http://checconio84.esy.es/telechargement/checconio84's_Mod.jar",
+  "authorList": ["checconio84"],
+  "credits": "https://www.youtube.com/user/checconio84",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
