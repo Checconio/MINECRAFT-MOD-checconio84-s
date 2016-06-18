@@ -36,6 +36,7 @@ tile.lightCarpet.lightBlue.name=Light Light Blue Carpet
 tile.lightCarpet.magenta.name=Light Magenta Carpet
 tile.lightCarpet.orange.name=Light Orange Carpet
 tile.lightCarpet.white.name=Light Carpet
+tile.floorLamp.floorLamp1.name=Floor Lamp
 
 item.uraniumIngot.name=Uranium Ingot
 item.uraniumPowder.name=Uranium Powder

@@ -37,6 +37,7 @@ tile.lightCarpet.red.name=Tapis lumineu rouge
 tile.lightCarpet.silver.name=Tapis lumineu gris clair
 tile.lightCarpet.white.name=Tapis lumineu blanc
 tile.lightCarpet.yellow.name=Tapis lumineu jaune
+tile.floorLamp.floorLamp1.name=Lampadaire
 
 item.uraniumIngot.name=Lingot d'Uranium
 item.uraniumPowder.name=Poudre d'Uranium

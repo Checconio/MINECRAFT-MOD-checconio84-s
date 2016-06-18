@@ -3,6 +3,7 @@ package com.checconio84.mod;
 import com.checconio84.mod.init.BiomesMod;
 import com.checconio84.mod.init.BlocksMod;
 import com.checconio84.mod.init.CraftsMod;
+import com.checconio84.mod.init.EventsMod;
 import com.checconio84.mod.init.ItemsMod;
 import com.checconio84.mod.proxy.CommonProxy;
 import com.checconio84.mod.world.WorldRegisterMod;
@@ -53,6 +54,7 @@ public class Checconio84
         CraftsMod.init();
         BiomesMod.init();
         WorldRegisterMod.mainRegsitry();
+        EventsMod.init();
     }
     
     @EventHandler

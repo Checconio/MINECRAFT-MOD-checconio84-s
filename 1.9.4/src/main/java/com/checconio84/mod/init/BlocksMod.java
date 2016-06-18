@@ -1,19 +1,20 @@
 package com.checconio84.mod.init;
 
-import com.checconio84.mod.blocks.BlockMod;
-import com.checconio84.mod.blocks.BlockOreMod;
-import com.checconio84.mod.blocks.BlockStairsMod;
-
 import static com.checconio84.mod.Checconio84.*;
 import static com.checconio84.mod.References.*;
-import static com.checconio84.mod.blocks.BlockOreMod.*;
 
 import com.checconio84.mod.blocks.BlockCarpetMod;
 import com.checconio84.mod.blocks.BlockColoredMod;
+import com.checconio84.mod.blocks.BlockFloorLampMod;
+import com.checconio84.mod.blocks.BlockMod;
+import com.checconio84.mod.blocks.BlockOreMod.BlockUraniumOreMod;
+import com.checconio84.mod.blocks.BlockStairsMod;
+import com.checconio84.mod.items.ItemBlockFloorLampMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -25,6 +26,7 @@ public class BlocksMod
     public static Block lightWool, lightCarpet;
     public static Block uraniumOre, uraniumBlock;
     public static Block obsidianStairs, brickStairs, stoneStairs, mossyCobbleStoneStairs, glassStairs;
+    public static Block floorLamp;
     
     public static void init()
     {
@@ -36,6 +38,7 @@ public class BlocksMod
         glassStairs = new BlockStairsMod(Blocks.GLASS.getDefaultState()).setHardness(0.3F).setUnlocalizedName("glassStairs").setCreativeTab(tabBlock);
         lightWool = new BlockColoredMod(Material.CLOTH).setHardness(0.8F).setUnlocalizedName("lightWool").setCreativeTab(tabBlock).setLightLevel(1.0F);
         lightCarpet = new BlockCarpetMod().setHardness(0.1F).setUnlocalizedName("lightCarpet").setCreativeTab(tabBlock).setLightLevel(1.0F).setLightOpacity(0);
+        floorLamp = new BlockFloorLampMod(Material.IRON).setHardness(4.0F).setResistance(10.0F).setUnlocalizedName("floorLamp").setCreativeTab(tabBlock).setLightLevel(1.0F).setLightOpacity(0);
     }
     
     public static void register()
@@ -48,59 +51,71 @@ public class BlocksMod
         GameRegistry.registerBlock(glassStairs, glassStairs.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(lightWool, ItemCloth.class, lightWool.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(lightCarpet, ItemCloth.class, lightCarpet.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(floorLamp, ItemBlockFloorLampMod.class, floorLamp.getUnlocalizedName().substring(5));
     }
     
     public static void registerRenders()
     {
-        registerRender(uraniumOre);
-        registerRender(uraniumBlock);
-        registerRender(obsidianStairs);
-        registerRender(stoneStairs);
-        registerRender(mossyCobbleStoneStairs);
-        registerRender(glassStairs);
-        registerRender(lightWool, 0, "white_wool");
-        registerRender(lightWool, 1, "orange_wool");
-        registerRender(lightWool, 2, "magenta_wool");
-        registerRender(lightWool, 3, "light_blue_wool");
-        registerRender(lightWool, 4, "yellow_wool");
-        registerRender(lightWool, 5, "lime_wool");
-        registerRender(lightWool, 6, "pink_wool");
-        registerRender(lightWool, 7, "gray_wool");
-        registerRender(lightWool, 8, "silver_wool");
-        registerRender(lightWool, 9, "cyan_wool");
-        registerRender(lightWool, 10, "purple_wool");
-        registerRender(lightWool, 11, "blue_wool");
-        registerRender(lightWool, 12, "brown_wool");
-        registerRender(lightWool, 13, "green_wool");
-        registerRender(lightWool, 14, "red_wool");
-        registerRender(lightWool, 15, "black_wool");
-        registerRender(lightCarpet, 0, "white_carpet");
-        registerRender(lightCarpet, 1, "orange_carpet");
-        registerRender(lightCarpet, 2, "magenta_carpet");
-        registerRender(lightCarpet, 3, "light_blue_carpet");
-        registerRender(lightCarpet, 4, "yellow_carpet");
-        registerRender(lightCarpet, 5, "lime_carpet");
-        registerRender(lightCarpet, 6, "pink_carpet");
-        registerRender(lightCarpet, 7, "gray_carpet");
-        registerRender(lightCarpet, 8, "silver_carpet");
-        registerRender(lightCarpet, 9, "cyan_carpet");
-        registerRender(lightCarpet, 10, "purple_carpet");
-        registerRender(lightCarpet, 11, "blue_carpet");
-        registerRender(lightCarpet, 12, "brown_carpet");
-        registerRender(lightCarpet, 13, "green_carpet");
-        registerRender(lightCarpet, 14, "red_carpet");
-        registerRender(lightCarpet, 15, "black_carpet");
+        registerRenderM(uraniumOre);
+        registerRenderM(uraniumBlock);
+        registerRenderM(obsidianStairs);
+        registerRenderM(stoneStairs);
+        registerRenderM(mossyCobbleStoneStairs);
+        registerRenderM(glassStairs);
+        registerRenderM(lightWool, 0, "white_wool");
+        registerRenderM(lightWool, 1, "orange_wool");
+        registerRenderM(lightWool, 2, "magenta_wool");
+        registerRenderM(lightWool, 3, "light_blue_wool");
+        registerRenderM(lightWool, 4, "yellow_wool");
+        registerRenderM(lightWool, 5, "lime_wool");
+        registerRenderM(lightWool, 6, "pink_wool");
+        registerRenderM(lightWool, 7, "gray_wool");
+        registerRenderM(lightWool, 8, "silver_wool");
+        registerRenderM(lightWool, 9, "cyan_wool");
+        registerRenderM(lightWool, 10, "purple_wool");
+        registerRenderM(lightWool, 11, "blue_wool");
+        registerRenderM(lightWool, 12, "brown_wool");
+        registerRenderM(lightWool, 13, "green_wool");
+        registerRenderM(lightWool, 14, "red_wool");
+        registerRenderM(lightWool, 15, "black_wool");
+        registerRenderM(lightCarpet, 0, "white_carpet");
+        registerRenderM(lightCarpet, 1, "orange_carpet");
+        registerRenderM(lightCarpet, 2, "magenta_carpet");
+        registerRenderM(lightCarpet, 3, "light_blue_carpet");
+        registerRenderM(lightCarpet, 4, "yellow_carpet");
+        registerRenderM(lightCarpet, 5, "lime_carpet");
+        registerRenderM(lightCarpet, 6, "pink_carpet");
+        registerRenderM(lightCarpet, 7, "gray_carpet");
+        registerRenderM(lightCarpet, 8, "silver_carpet");
+        registerRenderM(lightCarpet, 9, "cyan_carpet");
+        registerRenderM(lightCarpet, 10, "purple_carpet");
+        registerRenderM(lightCarpet, 11, "blue_carpet");
+        registerRenderM(lightCarpet, 12, "brown_carpet");
+        registerRenderM(lightCarpet, 13, "green_carpet");
+        registerRenderM(lightCarpet, 14, "red_carpet");
+        registerRenderM(lightCarpet, 15, "black_carpet");
+        registerRenderC(floorLamp, 0, "floorlamp1");
+        registerRenderC(floorLamp, 1, "floorlamp2");
+        registerRenderC(floorLamp, 2, "floorlamp3");
+        registerRenderC(floorLamp, 3, "floorlamp4");
+        ModelBakery.registerItemVariants(Item.getItemFromBlock(floorLamp), ItemBlockFloorLampMod.texture1, ItemBlockFloorLampMod.texture2, ItemBlockFloorLampMod.texture3,ItemBlockFloorLampMod.texture4);
     }
     
-    private static void registerRender(Block block)
+    private static void registerRenderM(Block block)
     {
         Item item = Item.getItemFromBlock(block);
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
     }
     
-    private static void registerRender(Block block, int metadata, String name)
+    private static void registerRenderM(Block block, int metadata, String name)
     {
         Item item = Item.getItemFromBlock(block);
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, metadata, new ModelResourceLocation(name, "inventory"));
+    }
+    
+    private static void registerRenderC(Block block, int metadata, String name)
+    {
+        Item item = Item.getItemFromBlock(block);
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, metadata, new ModelResourceLocation(MOD_ID + ":" + name, "inventory"));
     }
 }

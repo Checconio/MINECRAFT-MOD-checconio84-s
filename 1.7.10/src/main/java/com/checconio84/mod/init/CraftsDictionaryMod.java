@@ -88,9 +88,9 @@ public class CraftsDictionaryMod
         GameRegistry.addRecipe(new ItemStack(itemOut, quantity), params);
     }
     
-    public static void craftCustom(Block blockOut, Object... params)
+    public static void craftCustom(Block blockOut, int quantity, Object... params)
     {
-        GameRegistry.addRecipe(new ItemStack(blockOut, 1), params);
+        GameRegistry.addRecipe(new ItemStack(blockOut, quantity), params);
     }
     
     //Smelting

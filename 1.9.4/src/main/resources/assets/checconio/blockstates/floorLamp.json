@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "metadata=floorlamp1": { "model":"checconio:floorlamp1" },
+        "metadata=floorlamp2": { "model":"checconio:floorlamp2" },
+		"metadata=floorlamp3": { "model":"checconio:floorlamp3" },
+		"metadata=floorlamp4": { "model":"checconio:floorlamp4" }
+    }
+}
